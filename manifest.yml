@@ -1,0 +1,17 @@
+modules:
+  jira:customField:
+    - key: ip-address-field
+      name: IP Address
+      description: Field for IPv4 or IPv6 addresses
+      type: string
+      render: native
+      validation:
+        function: validate-ip
+  function:
+    - key: validate-ip
+      handler: index.validateIp
+app:
+  id: ari:cloud:ecosystem::app/6e3f2b21-1b98-4f3a-a0ec-201a99c0ebc2
+  runtime:
+    name: nodejs18.x
+permissions: {}
